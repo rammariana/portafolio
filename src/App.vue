@@ -19,7 +19,7 @@
             <li>Portafolio</li>
           </router-link>
           <router-link :to="{name: 'contacto'}">
-            <li>Contancto</li>
+            <li>Contacto</li>
           </router-link>
           <router-link :to="{name: 'about'}">
             <li>Sobre mí</li>
@@ -131,6 +131,7 @@ a:hover {
   top: -1rem;
   transition: opacity 1s ease;
   opacity: 0;
+  z-index: 80;
 }
 .animacion-menu {
   transition: all 1s ease;

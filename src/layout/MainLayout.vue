@@ -25,12 +25,12 @@ html, *, ::after, ::before {
   margin-top: 3rem;
   text-align: justify;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .contenedor-layout {
-    width: 70%;
+    width: 65%;
   }
   .layout-body {
-    width: 70%;
+    width: 65%;
     margin-top: 2rem;
     text-align: justify;
 }

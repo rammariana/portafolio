@@ -4,7 +4,7 @@
       <h1>Sobre mí</h1>
     </template>
     <template v-slot:body>
-      <div class="conatiner-fluid container sm d-flex flex-row pb-4">
+      <div class="conatiner-fluid container sm d-flex flex-row pb-4 justify-content-around">
         <button>Cv</button>
         <button>Portafolio</button>
       </div>
