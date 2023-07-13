@@ -2,7 +2,7 @@
   <nav class="container-fluid">
     <div class="container-sm d-flex flex-row justify-content-between align-items-center p-3">
       <router-link :to="{name: 'about'}">
-        <v-icon name="ri-home-2-fill"/>
+        <v-icon name="ri-home-2-fill" class="home"/>
       </router-link> 
       <!-- Menu hamburguesa -->
       <div class="raya-container" @click="mostrarOcultarMenu">
@@ -93,9 +93,7 @@ html, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-a:hover {
-  color: aqua;
+  user-select: none;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -120,6 +118,9 @@ a:hover {
 }
 .desplazamiento-abajo {
   animation: desplazarAbajo 2s ease backwards;
+}
+a:hover{
+    color: black;
 }
 .menu {
   width: 5rem;
@@ -169,7 +170,7 @@ nav {
     font-weight: bold;
     color: black;
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
     }
   }
 }
@@ -178,21 +179,24 @@ nav {
   width: 2rem;
   height: 2rem;
   padding: 1rem;
+  position: relative;
+  /*
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  */
   transition: transform 1s ease-in-out;
 }
 // Cuando haga hover sobre el contenedor
 // se cambiara el color de la x
 .raya-container:hover > .raya {
-  border: thin solid aqua;
+  border: thin solid black;
 }
 .raya {
   width: 1rem;
   height: 0.5px;
-  border: thin solid black;
+  border: thin solid white;
   border-radius: 1rem;
 }
 .raya-1 {
