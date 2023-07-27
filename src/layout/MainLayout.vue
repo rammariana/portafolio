@@ -1,38 +1,52 @@
 <template>
-  <section class="container-fluid d-flex flex-column align-items-center">
-    <section class="contenedor-layout d-flex flex-column align-items-center justify-content-center">
-      <slot name="h1"></slot>
+  <div class="layout">
+    <section class="contenedor-layout">
+      <slot name="seccion1"></slot>
+      <slot name="seccion2"></slot>
+    
     </section>
-    <section class="layout-body d-flex flex-column align-items-center">
-      <slot name="body"></slot>
-    </section>
-  </section>
+    <footer class="footer">
+      <small>Este espacio fue creado con Vue, Sass y Boostrap por Mariana Ramírez. Gracias por visitarme.</small>
+    </footer>
+  </div>
 </template>
-
-<style>
+<style lang="scss" scoped>  
 html, *, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .contenedor-layout {
-  width: 80%;
-  height: 15rem;
-  background-color: red;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.layout-body {
-  width: 80%;
-  margin-top: 3rem;
-  text-align: justify;
+.footer {
+  width: 100%;
+  bottom: 0;
+  color: $color-texto;
+  padding: 0 1rem 0.5rem 1rem;
 }
-@media screen and (min-width: 600px) {
-  .contenedor-layout {
-    width: 65%;
+.layout {
+  max-width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+small {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .contenedor-layout{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
   }
-  .layout-body {
-    width: 65%;
-    margin-top: 2rem;
-    text-align: justify;
+    .layout {
+  height: 100vh;
 }
+
+
 }
 </style>

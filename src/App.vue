@@ -1,5 +1,5 @@
 <template>
-  <nav class="container-fluid">
+  <nav class="container-fluid aparecer nav-home">
     <div class="container-sm d-flex flex-row justify-content-between align-items-center p-3">
       <router-link :to="{name: 'about'}">
         <v-icon name="ri-home-2-fill" class="home"/>
@@ -35,8 +35,10 @@
 </template>
 <script setup>
 import { ref } from 'vue'
+
 const mostrar = ref(false)
 const lista = ref(false)
+
 
 const mostrarOcultarMenu = () => {
   mostrar.value = !mostrar.value
@@ -46,12 +48,14 @@ const mostrarOcultarMenu = () => {
   const rayaContainer = document.querySelector('.raya-container')
   const raya1 = document.querySelector('.raya-1')
   const raya2 = document.querySelector('.raya-2')
+  let nav = document.querySelector('nav').children[0].children[0]
   //console.log(document.querySelector('.menu'))
   //
   rayaContainer.classList.toggle('rotar-menu')
   raya1.classList.toggle('mover-raya-1')
   raya2.classList.toggle('mover-raya-2')
-
+  nav.style.color = 'white'
+  // Color del nav en blanco cuando se abre el menu
   if (mostrar.value) {
     // Muestro el menu
     menu.classList.remove('animacion-menu-reverse')
@@ -64,6 +68,8 @@ const mostrarOcultarMenu = () => {
     ul.classList.remove('desplazamineto-arriba')
     menu.classList.add('animacion-menu-reverse')
     ul.classList.add('desplazamiento-abajo')
+    nav.style.color = 'rgb(142, 146, 150)'
+    // Restableciendo el color del nav cuando se abre el menu
   }
 
   
@@ -75,6 +81,7 @@ document.addEventListener('click', el => {
   const rayaContainer = document.querySelector('.raya-container')
   const raya1 = document.querySelector('.raya-1')
   const raya2 = document.querySelector('.raya-2')
+  let nav = document.querySelector('nav').children[0].children[0]
 
     if (el.target.nodeName === 'LI') {
       menu.classList.remove('animacion-menu')
@@ -84,12 +91,14 @@ document.addEventListener('click', el => {
       raya2.classList.toggle('mover-raya-2')
       mostrar.value = !mostrar.value
       lista.value = !lista.value
+    // Restableciendo el color del nav cuando se abre el menu
+      nav.style.color = 'rgb(142, 146, 150)'
     }
   })
 
 </script>
 <style lang="scss">
-html, ::after, ::before {
+*, html, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -100,7 +109,11 @@ html, ::after, ::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $color-texto;
+}
+.aparecer {
+  transition: all 1s;
+  animation: aparecer 1s ease-out;
 }
 .contenedor-menu {
   width: 100vw;
@@ -119,14 +132,11 @@ html, ::after, ::before {
 .desplazamiento-abajo {
   animation: desplazarAbajo 2s ease backwards;
 }
-a:hover{
-    color: black;
-}
 .menu {
   width: 5rem;
   height: 5rem;
-  color: white;
-  background-color: black;
+  color: $color-blanco;
+  background-color: $color-negro;
   border-radius: 50%;
   right: -1rem;
   top: -1rem;
@@ -156,22 +166,19 @@ a:hover{
 }
 .mover-raya-1 {
   transform: rotate(90deg) translateX(3.5px) !important;
-  border: thin solid white !important;
+  border: thin solid $color-blanco !important;
 }
 .mover-raya-2 {
     transform: translateY(-2.5px) !important;
-    border: thin solid white !important;
+    border: thin solid $color-blanco !important;
 }
-nav {
-  color: black;
+.nav-home {
+  color: $color-texto;
   z-index: 90;
   position: fixed;
   a {
     font-weight: bold;
-    color: black;
-    &.router-link-exact-active {
-      color: white;
-    }
+    color: $color-texto;
   }
 }
 .raya-container {
@@ -180,23 +187,17 @@ nav {
   height: 2rem;
   padding: 1rem;
   position: relative;
-  /*
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  */
   transition: transform 1s ease-in-out;
 }
 // Cuando haga hover sobre el contenedor
 // se cambiara el color de la x
 .raya-container:hover > .raya {
-  border: thin solid black;
+  border: thin solid $color-morado;
 }
 .raya {
   width: 1rem;
   height: 0.5px;
-  border: thin solid white;
+  border: thin solid $color-texto;
   border-radius: 1rem;
 }
 .raya-1 {
@@ -209,7 +210,9 @@ nav {
 .rotar-menu {
   transform: rotate(45deg);
 }
-
+.ov-icon:hover {
+  fill: $color-morado;
+}
 #ul-contenedor {
   transition: display 5s ease;
   margin-top: 4rem;
@@ -221,10 +224,20 @@ nav {
     }
     li {
       padding-bottom: 1.5rem;
+      color: $color-blanco;
     }
   }
 }
-
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+}
 @keyframes crecer {
   // Aqui hacemos la animacion del menu hamburguesa
   0% {

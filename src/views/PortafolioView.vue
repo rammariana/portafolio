@@ -9,72 +9,126 @@
     </div>
   <div class="slider-container">
     <div class="slide" id="0">
-      <div class="img rojo">
+      <div class="img">
         <div class="foto foto-g video">
           <video src="../assets/barraza-1.webm" autoplay="true" muted="true" loop="true"></video>
         </div>
         <div class="foto foto-p">
           <img src="../assets/barraza-2.png" alt="Barraza Investors">
+        </div> 
+        <h3>Barraza Investors</h3>  
+        <div class="tecnologias">
+          <v-icon name="la-html5" scale="1.8"></v-icon>
+          <v-icon name="la-css3-alt" scale="1.8"></v-icon>
+          <v-icon name="ri-vuejs-line" scale="1.8"></v-icon>
+          <v-icon name="si-bootstrap" scale="1.8"></v-icon>
+        </div>     
+        <div class="btn-container">
+          <button class="button">
+            <span class="button-text">Demo</span>
+          </button>
+           <button class="button">
+            <span class="button-text">Code</span>
+          </button>
         </div>        
-        <div class="botton">
-          <button>Demo</button>
-          <button>Code</button>
-        </div>
       </div>
     </div>
     <div class="slide" id="1">
-      <div class="img verde">
+      <div class="img">
         <div class="foto foto-g">
           <img src="../assets/tienda-1.png" alt="IDtly">
         </div>
         <div class="foto foto-p">
           <img src="../assets/tienda-2.png" alt="IDtly">
         </div>
-        <div class="botton">
-          <button>Demo</button>
-          <button>Code</button>
-        </div>       
+        <h3>Tienda de Modas</h3>  
+        <div class="tecnologias">
+          <v-icon name="la-html5" scale="1.8"></v-icon>
+          <v-icon name="la-css3-alt" scale="1.8"></v-icon>
+          <v-icon name="fa-sass" scale="1.8"></v-icon>
+          
+        </div> 
+        <div class="btn-container">
+          <button class="button">
+            <span class="button-text">Demo</span>
+          </button>
+          <button class="button">
+            <span class="button-text">Code</span>
+          </button>
+        </div>        
       </div>
     </div>
     <div class="slide" id="2">
-      <div class="img morado">
+      <div class="img">
         <div class="foto foto-g">
           <img src="../assets/laika-1.png" alt="Laika copia">
         </div>
         <div class="foto foto-p">
           <img src="../assets/laika-2.png" alt="Laika copia">
         </div>
-        <div class="botton">
-          <button>Demo</button>
-          <button>Code</button>
-        </div>      
+        <h3>Copia de Laika</h3>  
+        <div class="tecnologias">
+          <v-icon name="la-html5" scale="1.8"></v-icon>
+          <v-icon name="la-css3-alt" scale="1.8"></v-icon>
+          <v-icon name="si-bootstrap" scale="1.8"></v-icon>
+        </div> 
+        <div class="btn-container">
+          <button class="button">
+            <span class="button-text">Demo</span>
+          </button>
+           <button class="button">
+            <span class="button-text">Code</span>
+          </button>
+        </div>        
+      
       </div>
     </div>
     <div class="slide" id="3">
-      <div class="img amarillo">
+      <div class="img">
         <div class="foto foto-g">
           <img src="../assets/tictac-1.png" alt="Tic-Tac">
         </div>
         <div class="foto foto-p">
           <img src="../assets/tictac-2.png" alt="Tic-Tac">
         </div>
-        <div class="botton">
-          <button>Demo</button>
-          <button>Code</button>
-        </div>       
+        <h3>Juego tic-tac-toe</h3>  
+        <div class="tecnologias">
+          <v-icon name="la-html5" scale="1.8"></v-icon>
+          <v-icon name="la-css3-alt" scale="1.8"></v-icon>
+          <v-icon name="io-logo-javascript" scale="1.8"></v-icon>
+        </div> 
+        <div class="btn-container">
+          <button class="button">
+            <span class="button-text">Demo</span>
+          </button>
+           <button class="button">
+            <span class="button-text">Code</span>
+          </button>
+        </div>        
+      
       </div>
     </div>
     <div class="slide" id="4">
-      <div class="img rosa">
+      <div class="img">
         <div class="foto foto-g">
           <img src="../assets/poke-1.png" alt="Pokememoria">
         </div>
         <div class="foto foto-p">
           <img src="../assets/poke-2.png" alt="Pokememoria">
         </div>
-        <div class="botton">
-          <button>Demo</button>
-          <button>Code</button>
+        <h3>Juego Memoria</h3>  
+        <div class="tecnologias">
+          <v-icon name="la-html5" scale="1.8"></v-icon>
+          <v-icon name="la-css3-alt" scale="1.8"></v-icon>
+          <v-icon name="io-logo-javascript" scale="1.8"></v-icon>
+        </div> 
+        <div class="btn-container">
+          <button class="button">
+            <span class="button-text">Demo</span>
+          </button>
+           <button class="button">
+            <span class="button-text">Code</span>
+          </button>
         </div>        
       </div>
     </div>
@@ -83,13 +137,14 @@
 </template>
 <script setup>
 import { onMounted, ref } from 'vue'
-//
+
 let id = ref(0)
-// rojo, naranja, amarillo, celeste, verde
-let background = ['rgb(181, 27, 226)', 'rgb(244, 112, 27)', 'rgb(250, 212, 18)', 'rgb(122, 224, 200)', 'rgb(226, 27, 27)']
-let colorBarraActiva = 'rgba(225, 225, 225)'
-let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
+// morado #C250F2, naranja rgb(244, 112, 27), amarillo rgb(250, 212, 18), celeste rgb(122, 224, 200), rojo rgb(255, 60, 51
+//let background = ['#FFB7B7', '#FFF0B7', '#CBFFB7', '#B7FFEB', '#F4B7FF']
+let colorBarraActiva = '#ec86fa'
+let colorBarraPasiva= 'rgba(142, 146, 150, 0.418)'
   onMounted(() => {
+   
   const barra = document.querySelectorAll('.barra')
   let isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
   // Expresion regular para ver si el dispositivo es movil o pc
@@ -101,7 +156,7 @@ let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
 
   
   // Estableciendo fondo, posicion y animacion inicial
-  slider.style.backgroundColor = background[0]
+  //slider.style.backgroundColor = background[0]
   barra[0].style.backgroundColor = colorBarraActiva
   
   sliderContainer.childNodes[id.value].childNodes[0].childNodes[0].classList.add('aparecer-derecha')
@@ -136,7 +191,7 @@ let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
     }
     sliderContainer.style.transform = `translateX(-${slideWidth * id.value}px)`  
     // Actualizando el color de fondo
-    slider.style.backgroundColor = background[id.value]
+    //slider.style.backgroundColor = background[id.value]
     // Actualizando posicion de la diapo en la barra
     if (barra[id.value]) {
       barra[id.value].style.backgroundColor = colorBarraActiva;
@@ -189,7 +244,7 @@ let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
         sliderContainer.offsetHeight;
         sliderContainer.style.transition = "transform 1s";
         // Actualizando color de fondo y posicion de la barra
-        slider.style.backgroundColor = background[id.value]
+        //slider.style.backgroundColor = background[id.value]
         if (barra[id.value]) {
           barra[id.value].style.backgroundColor = colorBarraActiva;
         }
@@ -216,7 +271,7 @@ let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
         }
       if (distance.value > 0 && id.value) {
         id.value--;
-        slider.style.backgroundColor = background[id.value]
+        //slider.style.backgroundColor = background[id.value]
         // Animacion transicion de las diapositivas
         // Añadiendo la animacion de los hijos
         sliderContainer.childNodes[id.value].childNodes[0].childNodes[0].classList.add('aparecer-izquierda')
@@ -234,7 +289,7 @@ let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
           sliderContainer.offsetHeight;
           sliderContainer.style.transition = "transform 1s";
         }
-        slider.style.backgroundColor = background[id.value]
+        //slider.style.backgroundColor = background[id.value]
         // Añadiendo la animacion de los hijos
         sliderContainer.childNodes[id.value].childNodes[0].childNodes[0].classList.add('aparecer-derecha')
         sliderContainer.childNodes[id.value].childNodes[0].childNodes[1].classList.add('aparecer-derecha')
@@ -251,7 +306,7 @@ let colorBarraPasiva= 'rgba(225, 225, 225, 0.418)'
 })
 // Evento clic para las barras de posicion actual
 const barraHandle = (e) => {
-  const slider = document.querySelector('.slider');
+  //const slider = document.querySelector('.slider');
   const slides = document.querySelectorAll('.slide')
   const sliderContainer = document.querySelector('.slider-container');
   const barra = document.querySelectorAll('.barra')
@@ -292,7 +347,7 @@ const barraHandle = (e) => {
       sliderContainer.childNodes[id.value].childNodes[0].childNodes[1].style.animationDelay = '0.1s'
     }
   }
-  slider.style.backgroundColor = background[id.value]
+  //slider.style.backgroundColor = background[id.value]
   // Actualizando la posicion de la barra activa
   if (barra[id.value]) {
     barra[id.value].style.backgroundColor = colorBarraActiva
@@ -300,10 +355,7 @@ const barraHandle = (e) => {
 
 }
 </script>
-<style lang="scss">
-* {
-  color: white;
-}
+<style lang="scss" scoped>
 .aparecer-derecha {
   animation: aparecer-derecha 1s ease-out;
 }
@@ -314,7 +366,7 @@ const barraHandle = (e) => {
   width: 90%;
   padding: 0.2rem;
   border-radius: 2rem;
-  background-color: rgba(225, 225, 225, 0.418);
+  background-color: rgba(142, 146, 150, 0.418);
   transition: background-color 1s ease-out;
 }
 .barra-contenedor {
@@ -328,28 +380,58 @@ const barraHandle = (e) => {
   bottom: 1rem;
   z-index: 9;
 }
-.botton {
+.btn-container {
   width: 50%;
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: 85%;
-  button {
-    background-color: transparent;
-    width: 6.5rem;
+  top: 79%;
+    button {
+      width: 6.5rem;
     height: 3rem;
-    border: thin solid white;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border: none;
     border-radius: 2rem;
+    background-color: $color-morado;
+    color: $color-blanco;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 }
-.buttons {
+.button-text {
   position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  z-index: 9;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: $color-amarillo;
+  border-radius: 2rem;
+  transition: height 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.button:hover {
+  border: none;
 }
 .foto {
   position: absolute;
@@ -372,6 +454,11 @@ const barraHandle = (e) => {
   height: 100%;
   position: relative;
   transition: background-color 1s ease;
+  h3 {
+    position: absolute;
+    top: 4rem;
+    left: calc(50% / 2.5);
+  }
 }
 img {
   width: 100%;
@@ -404,6 +491,19 @@ img {
   0 -> los elementos flexibles no pueden encogerse más allá de su tamaño inicial
   100% ->  cada elemento ocupará todo el ancho disponible dentro del contenedor*/
 }
+.tecnologias {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 75%;
+  .ov-icon {
+    color: $color-texto;
+  }
+  .ov-icon:hover {
+    fill: $color-texto;
+  }
+}
 video {
   width: 100%;
   height: 100%;
@@ -414,6 +514,7 @@ video {
   height: 10rem;
   left: 2.5rem;
 }
+
 @keyframes aparecer-derecha {
   from {
     display: none;
@@ -460,9 +561,9 @@ video {
 
 @media screen and (min-width: 800px) {
   .foto-g {
-    width: 22rem;
-    height: 22rem;
-    top: 15vh;
+    width: 20rem;
+    height: 20rem;
+    //top: 15vh;
     left: 8rem;
   }
   .foto-p {
@@ -490,15 +591,15 @@ video {
     left:30rem;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .slider {
-    padding-top: 8rem;
+    padding-top: 2rem;
   }
   .foto-g {
-    left: 15rem;
+    left: 20rem; /*15rem*/
   }
   .foto-p {
-    left:33rem;
+    left:40rem; /*33rem*/
   }
 
 }

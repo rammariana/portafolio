@@ -1,3 +1,37 @@
-$color-barra-activa: rgba(233, 209, 226, 0.767);
+$color-barra-activa: rgba(233, 209, 226, 0.801);
 $color-barra-pasiva: rgba(175, 156, 171, 0.767);
-$color: rgba(255, 255, 255, 0.418)
+$color-morado:#ec86fa;
+$color-morado-oscuro: rgb(111, 10, 141); 
+$color-naranja: rgb(252, 104, 35); 
+$color-amarillo: rgb(250, 212, 18); 
+$color-celeste: rgb(122, 192, 224);
+$color-rojo:rgb(226, 27, 27);
+$color-blanco: rgb(255, 254, 254);
+$color-naranja-ligero: rgb(252, 140, 35); 
+$color-blanco-focus: rgba(255, 255, 255, 0.438); 
+$color-naranja-focus: rgb(252, 104, 35, 0.205); 
+$color-rojo-focus:rgba(226, 27, 27, 0.568);
+$color-negro: rgb(32, 37, 46); 
+$color-texto: rgb(142, 146, 150);
+
+
+@keyframes rellenar-boton {
+  0% {
+    width: 0%;
+    background-color: $color-blanco-focus;
+  }
+  100% {
+    width: 100%;
+    background-color: $color-naranja;
+  }
+}
+@keyframes aparecer {
+  0%{
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
