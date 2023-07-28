@@ -25,10 +25,10 @@
         </div>     
         <div class="btn-container">
           <button class="button">
-            <span class="button-text">Demo</span>
+            <span class="button-text"><a href="https://barrazainvestors.netlify.app/home">Demo</a></span>
           </button>
            <button class="button">
-            <span class="button-text">Code</span>
+            <span class="button-text"><a href="https://github.com/rammariana/barraza-investors">Code</a></span>
           </button>
         </div>        
       </div>
@@ -50,10 +50,10 @@
         </div> 
         <div class="btn-container">
           <button class="button">
-            <span class="button-text">Demo</span>
+            <span class="button-text"><a href="https://idtlyshop.netlify.app">Demo</a></span>
           </button>
           <button class="button">
-            <span class="button-text">Code</span>
+            <span class="button-text"><a href="https://github.com/rammariana/tienda-sass">Code</a></span>
           </button>
         </div>        
       </div>
@@ -74,10 +74,10 @@
         </div> 
         <div class="btn-container">
           <button class="button">
-            <span class="button-text">Demo</span>
+            <span class="button-text"><a href="https://balto.netlify.app">Demo</a></span>
           </button>
            <button class="button">
-            <span class="button-text">Code</span>
+            <span class="button-text"><a href="https://github.com/rammariana/laika">Code</a></span>
           </button>
         </div>        
       
@@ -99,10 +99,10 @@
         </div> 
         <div class="btn-container">
           <button class="button">
-            <span class="button-text">Demo</span>
+            <span class="button-text"><a href="https://tictactoesquare.netlify.app">Demo</a></span>
           </button>
            <button class="button">
-            <span class="button-text">Code</span>
+            <span class="button-text"><a href="https://github.com/rammariana/tic-tac-toe">Code</a></span>
           </button>
         </div>        
       
@@ -124,10 +124,10 @@
         </div> 
         <div class="btn-container">
           <button class="button">
-            <span class="button-text">Demo</span>
+            <span class="button-text"><a href="https://pokememoria.netlify.app">Demo</a></span>
           </button>
            <button class="button">
-            <span class="button-text">Code</span>
+            <span class="button-text"><a href="https://github.com/rammariana/memoria">Code</a></span>
           </button>
         </div>        
       </div>
@@ -200,7 +200,7 @@ let colorBarraPasiva= 'rgba(142, 146, 150, 0.418)'
       sliderContainer.childNodes[id.value].childNodes[0].childNodes[0].classList.add('aparecer-derecha')
       sliderContainer.childNodes[id.value].childNodes[0].childNodes[1].classList.add('aparecer-derecha')
     }
-  }, 5000);
+  }, 8000);
   // Detectando si el usuario usa pc o movil
   if (isMobile) {
     // El usuario usa dispositivo móvil, capturamos evento tactil
@@ -399,6 +399,10 @@ const barraHandle = (e) => {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+  a {
+    text-decoration: none;
+    color: $color-blanco;
+  }
 }
 .button-text {
   position: absolute;
@@ -496,7 +500,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  top: 75%;
+  top: 77%;
   .ov-icon {
     color: $color-texto;
   }
