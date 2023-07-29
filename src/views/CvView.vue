@@ -1,48 +1,47 @@
 <template>
   <div class="layout">
-          <section class="seccion-uno  d-flex flex-column align-items-center justify-content-center">
-          <div class="circulo border d-flex align-items-center justify-content-center mb-3">Foto</div>
+          <div class="circulo border d-flex align-items-center justify-content-center mb-3"><v-icon name="fa-user-astronaut" scale="3.5"></v-icon></div>
           <h3>Mariana Ramírez</h3>
-          <small class="mb-3">Frontend developer</small>
-          <div class="div">
-            <h5><v-icon name="fa-user-alt" scale="1.2"></v-icon> Sobre Mí</h5>
-          </div>
-          <div class="div d-flex justify-content-center">
-            <p>Soy Mariana, me he enfocado principalmente en practicar y sentar las bases del desarrollo frontend con Vue.js, sin embargo también siento interés por la naturaleza, el crochet y el backend, por lo cual actualmente me encuentro estudiando Node.js y Express.</p>
-          </div>
-          <div class="div">
-            <h5><v-icon name="gi-smartphone" scale="1.2"></v-icon> Contacto</h5>
-          </div>
-          <div class="div d-flex flex-column justify-content-start ps-5">
+          <small class="mb-5">Frontend developer</small>
+          <div class="contacto mb-5 d-flex flex-row justify-content-evenly align-items-center w-100">
               <p><v-icon name="fa-map-marker-alt"></v-icon>Colombia</p>
-              <p><v-icon name="bi-facebook"></v-icon> marianahdgdg</p>
-              <p><v-icon name="bi-github"></v-icon> rammarianahsh</p>
+              <p><v-icon name="co-gmail"></v-icon> marianasmatos1</p>
+              <p><v-icon name="bi-github"></v-icon> rammariana</p>
           </div>
-          <div class="div">
-            <h5><v-icon name="gi-skills" scale="1.2"></v-icon> Habilidades</h5>
-          </div>
-            <div class="div">
-                <div class="tecnologias">
-                <v-icon name="bi-github" scale="1.6"></v-icon>
-                <v-icon name="la-html5" scale="1.6"></v-icon>
-                <v-icon name="la-css3-alt" scale="1.6"></v-icon>
-                <v-icon name="io-logo-javascript" scale="1.6"></v-icon>
-                <v-icon name="ri-vuejs-line" scale="1.6"></v-icon>
-                <v-icon name="fa-sass" scale="1.6"></v-icon>
-                <v-icon name="si-bootstrap" scale="1.6"></v-icon> 
-                <v-icon name="bi-git" scale="1.6"></v-icon>
-              </div>
+          <p class="mb-5 parrafo">Hola, soy Mariana, me he enfocado principalmente en practicar y sentar las bases del desarrollo frontend con Vue.js, sin embargo también siento gran interés por la naturaleza, el crochet y el backend, por lo cual actualmente me encuentro estudiando Node.js y Express. Soy una persona perseverante, autodidacta, responsable con sus obligaciones, me gusta la tranquilidad, el respeto y el buen trato con mis compañeros.</p>
+          <div class="div mb-5">
+            <div class="habilidades">
+              <h5><v-icon name="gi-bullseye" scale="1.2"></v-icon> Habilidades</h5>
+              <p>Perseverante</p>
+              <p>Autodidacta</p>
+              <p>Responsable</p>
             </div>
-      </section>
-      <section class="seccion-dos">
-          <div class="div-right">
-            <h5><v-icon name="fa-hammer" scale="1.2"></v-icon> Experiencia</h5>
-            
+            <div class="tecnologias">
+                  <h5><v-icon name="gi-skills" scale="1.2"></v-icon> Tecnologías</h5>
+                  <v-icon name="la-html5" scale="1.6"></v-icon>
+                  <v-icon name="la-css3-alt" scale="1.6"></v-icon>
+                  <v-icon name="io-logo-javascript" scale="1.6"></v-icon>
+                  <v-icon name="ri-vuejs-line" scale="1.6"></v-icon>
+                  <v-icon name="fa-sass" scale="1.6"></v-icon>
+                  <v-icon name="si-bootstrap" scale="1.6"></v-icon> 
+                  <v-icon name="bi-github" scale="1.6"></v-icon>
+                <v-icon name="bi-git" scale="1.6"></v-icon>
+            </div>
+            </div>
+          
+            <h5 class="fw-bold mb-5"><v-icon name="fa-hammer" scale="1.2"></v-icon> Experiencia</h5>
+          <div class="parrafo d-flex flex-column align-items-center mb-5">
+            <p><b>Barraza Investors:</b> Me dediqué a crear la pagina web con todas sus vistas y a mantener comunicación con la base de datos mediante peticiones GET y PUT, utilizando HTML, CSS y JavaScript vanilla. Porteriormente hice una refactorización del código y añadí algunas funcionalidades nuevas con Vue.js.</p>
+            <p><b>Poesía Vzla:</b> Estuve a cargo de la corrección de estilo y ortografía, así como de añadir nuevas entradas a la pagina.</p>
           </div>
-          <div class="div-right">
-            <h5><v-icon name="gi-bookmarklet" scale="1.2"></v-icon> Estudios</h5>
-          </div>
-      </section>
+          <h5 class="fw-bold mb-5"><v-icon name="gi-bookmarklet" scale="1.2"></v-icon> Estudios</h5>
+          <ul class="parrafo">
+            <li><v-icon name="gi-check-mark" scale="1.0"></v-icon> Diseño web responsivo <b>(freeCodeCamp)</b></li>
+            <li><v-icon name="gi-check-mark" scale="1.0"></v-icon> Estructura de datos y algoritmos de JavaScript <b>(freeCodeCamp)</b></li>
+            <li><v-icon name="gi-check-mark" scale="1.0"></v-icon> Curso de JavaScript <b>(JonMircha - Youtube)</b></li>
+            <li><v-icon name="gi-check-mark" scale="1.0"></v-icon> Curso de Vue profesional <b>(Ademass)</b></li>
+            <li><v-icon name="gi-check-mark" scale="1.0"></v-icon> Node.js y Express - Curso desde cero <b>(freeCodeCamp - Youtube)</b></li>
+          </ul>
   </div>  
 
 </template>
@@ -52,80 +51,77 @@
 .circulo {
   width: 10rem;
   height: 10rem;
-  background-color: $color-blanco;
+  background-color: $color-morado;
   border-radius: 50%;
+  color: $color-blanco;
+}
+.contacto {
+  padding: 0 1rem;
 }
 .div {
   width: 100%;
-  margin: 1rem 0;
-}
-.div-right {
   display: flex;
-  justify-content: flex-end;
+  padding: 0 1rem 0 0;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.habilidades {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 1rem 0;
+  justify-content: space-around;
+  p {
+    text-align: center;
+  }
 }
-h5 {
-  text-align: left;
-  width: 80%;
-  padding: 0.2rem;
-  padding-left: 2.5rem;
-  background-color: $color-morado;
-  color: $color-blanco;
-  font-size: 1rem;
-}
-p {
+.parrafo {
   text-align: justify;
   width: 80%;
 }
+.habilidades h5, .tecnologias h5 {
+  font-weight: bold;
+  margin: 2.5rem 0;
+}
+h5 {
+  font-size: 1rem;
+}
 .layout {
-  width: 100vw;
+  width: 85vw;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 4rem;
+  margin: auto;
 }
-.seccion-uno, .seccion-dos {
-  animation: aparecer 1s ease;
+ul {
+  text-align: justify;
+  margin-bottom: 3rem;
+  padding-left: 0;
+  li {
+    list-style: none;
+  }
 }
-
-/*
-.seccion-uno {
-  margin: 3rem 0;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-}
-.seccion-dos {
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}*/
-
 .tecnologias {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  justify-content: space-evenly;
   row-gap: 1rem;
+  justify-items: center;
+  h5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
 .ov-icon:hover {
   fill: $color-texto;
 }
 @media screen and (min-width: 768px) {
-  /*
-  .seccion-uno {
-    width: auto;
-    height: auto;
-  }
-  
-*/
 .layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 70vw;
 }  
 }
 

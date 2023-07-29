@@ -22,9 +22,17 @@ import {
   FaUserAlt,
   GiSkills,
   BiGit,
+  GiBullseye,
+  CoGmail,
+  GiCheckMark,
+  FaUserAstronaut,
 } from "oh-vue-icons/icons";
 
 addIcons(
+  FaUserAstronaut,
+  GiCheckMark,
+  GiBullseye,
+  CoGmail,
   BiGit,
   GiBookmarklet,
   FaMapMarkerAlt,

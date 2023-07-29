@@ -30,7 +30,7 @@ html, *, ::after, ::before {
   padding: 0 1rem 0.5rem 1rem;
 }
 .layout {
-  max-width: 100vw;
+  //max-width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;

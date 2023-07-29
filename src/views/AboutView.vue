@@ -34,19 +34,17 @@
 <script setup>
 import MainLayout from '../layout/MainLayout.vue'
 import {onMounted, ref} from 'vue'
-const arrImageA = ["https://img.freepik.com/vector-premium/mujeres-corriendo-paisaje-mujeres-ropa-deportiva-correr-atleta-femenina-deportistas_24877-64763.jpg", "https://img.freepik.com/vector-gratis/programador-trabajando-codigo-desarrollo-web-ingeniero-programacion-script-python-php-java-computadora_90220-249.jpg", "https://img.freepik.com/vector-premium/mujer-teje-casa-tiempo-pasatiempo-hogar-acogedor-ilustracion-dibujos-animados-planos-lindos-vector-concepto-hecho-mano_564312-501.jpg", "https://img.freepik.com/vector-gratis/dibujado-mano-ilustracion-plantacion-arboles-diseno-plano_23-2149210052.jpg"]
+const arrImageA = ["https://img.freepik.com/vector-premium/mujeres-corriendo-paisaje-mujeres-ropa-deportiva-correr-atleta-femenina-deportistas_24877-64763.jpg", "https://img.freepik.com/vector-gratis/programador-trabajando-codigo-desarrollo-web-ingeniero-programacion-script-python-php-java-computadora_90220-249.jpg", "https://img.freepik.com/vector-premium/mujer-teje-casa-tiempo-pasatiempo-hogar-acogedor-ilustracion-dibujos-animados-planos-lindos-vector-concepto-hecho-mano_564312-500.jpg", "https://img.freepik.com/vector-gratis/dibujado-mano-ilustracion-plantacion-arboles-diseno-plano_23-2149210052.jpg"]
 
 let imageA = ref(null)
+let indexImgA = ref(0);
 
 onMounted(() => {
+imageA.value = arrImageA[indexImgA.value]
   let cero = document.getElementById("0");
   let degA = ref(0);
-  let indexImgA = ref(0);
   
-  /*if (indexImgA.value === 0) {
-    imageA.value = arrImageA[0]
-  }*/
-  imageA.value = arrImageA[indexImgA.value]
+ 
   setInterval(() => {
     degA.value += 360
     cero.style.transform = `perspective(500px) rotateY(${degA.value}deg)`
@@ -55,9 +53,8 @@ onMounted(() => {
       if (indexImgA.value === arrImageA.length) {
         indexImgA.value = 0;
       }
-      imageA.value = arrImageA[indexImgA.value]
-    }, 3100);
-
+      imageA.value = arrImageA[indexImgA.value];  
+    }, 3155);
   }, 3000);
 
 })
@@ -142,12 +139,14 @@ onMounted(() => {
 .front {
   background-color: transparent;
   transform: perspective(500px) rotateY(0deg);
-  transition: opacity 1s;
-  animation: opacidad 1s ease;
+  transition: opacity 1.5s;
+  animation: opacidad 1.5s ease;
 }
 img {
   width: 100%;
   height: 100%;
+  transition: opacity 1.5s;
+  animation: opacidad 1.5s ease;
 }
 .ov-icon:hover {
   fill: $color-morado;
@@ -155,9 +154,7 @@ img {
 p {
   text-indent: 0.8rem;
 }
-.redes {
-  color: $color-amarillo;
-}
+
 .seccion-uno, .seccion-dos {
   animation: aparecer 1s ease;
 }
@@ -176,14 +173,6 @@ p {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 500px) {
- .card {
-   width: 20rem;
-   height: 20rem;
-  }
-  .seccion-uno {
-    margin-top: 3rem;
-  }
   @keyframes opacidad {
     0% {
       opacity: 0;
@@ -191,6 +180,15 @@ p {
     100%{
       opacity: 1;
     }    
+  }
+
+@media screen and (min-width: 500px) {
+ .card {
+   width: 20rem;
+   height: 20rem;
+  }
+  .seccion-uno {
+    margin-top: 3rem;
   }
 }
 @media screen and (min-width: 768px) {

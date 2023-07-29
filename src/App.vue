@@ -38,7 +38,17 @@ import { ref } from 'vue'
 
 const mostrar = ref(false)
 const lista = ref(false)
-
+/*
+// añadiendo fondo al nav si hay scroll
+document.addEventListener('scroll', () => {
+  let scroll = window.scrollY;
+  if (scroll > 10) {
+    document.querySelector('nav').style.backgroundColor = 'rgb(255, 254, 254)'
+  }
+   if (scroll < 10) {
+    document.querySelector('.nav-home').style.backgroundColor = 'transparent'
+  })
+}*/
 
 const mostrarOcultarMenu = () => {
   mostrar.value = !mostrar.value
@@ -55,6 +65,7 @@ const mostrarOcultarMenu = () => {
   raya1.classList.toggle('mover-raya-1')
   raya2.classList.toggle('mover-raya-2')
   nav.style.color = 'white'
+  
   // Color del nav en blanco cuando se abre el menu
   if (mostrar.value) {
     // Muestro el menu
@@ -62,6 +73,7 @@ const mostrarOcultarMenu = () => {
     ul.classList.remove('desplazamiento-abajo')
     menu.classList.add('animacion-menu')
     ul.classList.add('desplazamineto-arriba')
+    //document.querySelector('.nav-home').style.backgroundColor = 'transparent'
   } else {
     // Lo oculto
     menu.classList.remove('animacion-menu')
@@ -69,10 +81,9 @@ const mostrarOcultarMenu = () => {
     menu.classList.add('animacion-menu-reverse')
     ul.classList.add('desplazamiento-abajo')
     nav.style.color = 'rgb(142, 146, 150)'
+    //document.querySelector('.nav-home').style.backgroundColor = 'rgb(255, 255, 255)'
     // Restableciendo el color del nav cuando se abre el menu
   }
-
-  
   
 }
 document.addEventListener('click', el => {
@@ -176,9 +187,12 @@ document.addEventListener('click', el => {
   color: $color-texto;
   z-index: 90;
   position: fixed;
+  //background-color: rgb(255, 255, 255);
+  //transition: 1s ease;
   a {
     font-weight: bold;
     color: $color-texto;
+    //background-color: rgb(255, 255, 255);
   }
 }
 .raya-container {
