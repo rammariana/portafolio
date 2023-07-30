@@ -148,6 +148,7 @@ img {
   height: 100%;
   transition: opacity 1.5s;
   animation: opacidad 1.5s ease;
+  border: none;
 }
 .ov-icon:hover {
   fill: $color-morado;
