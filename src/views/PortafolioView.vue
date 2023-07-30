@@ -143,13 +143,13 @@ let id = ref(0)
 //let background = ['#FFB7B7', '#FFF0B7', '#CBFFB7', '#B7FFEB', '#F4B7FF']
 let colorBarraActiva = '#ec86fa'
 let colorBarraPasiva= 'rgba(142, 146, 150, 0.418)'
-  onMounted(() => {
+onMounted(() => {
    
   const barra = document.querySelectorAll('.barra')
-  let isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+  //let isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
   // Expresion regular para ver si el dispositivo es movil o pc
 
-  const slider = document.querySelector(".slider");
+  //const slider = document.querySelector(".slider");
   const slides = document.querySelectorAll('.slide')
   const sliderContainer = document.querySelector(".slider-container");
   const slideWidth = slides[0].clientWidth;
@@ -202,7 +202,7 @@ let colorBarraPasiva= 'rgba(142, 146, 150, 0.418)'
     }
   }, 8000);
   // Detectando si el usuario usa pc o movil
-  if (isMobile) {
+  /*if (isMobile) {
     // El usuario usa dispositivo móvil, capturamos evento tactil
     //ESTABLECIENDO POSICION ACTUAL Y ATRAPANDO VALORES DEL TOUCH***
     const slideWidth = slides[0].clientWidth;
@@ -302,7 +302,7 @@ let colorBarraPasiva= 'rgba(142, 146, 150, 0.418)'
       touchMovePoint.value = null;
       distance.value = null;
     });
-  } 
+  } */
 })
 // Evento clic para las barras de posicion actual
 const barraHandle = (e) => {
