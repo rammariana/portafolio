@@ -141,6 +141,7 @@ imageA.value = arrImageA[indexImgA.value]
   transform: perspective(500px) rotateY(0deg);
   transition: opacity 1.5s;
   animation: opacidad 1.5s ease;
+  border: none;
 }
 img {
   width: 100%;
