@@ -146,10 +146,10 @@ let colorBarraPasiva= 'rgba(142, 146, 150, 0.418)'
 onMounted(() => {
    
   const barra = document.querySelectorAll('.barra')
-  //let isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+  let isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
   // Expresion regular para ver si el dispositivo es movil o pc
 
-  //const slider = document.querySelector(".slider");
+  const slider = document.querySelector(".slider");
   const slides = document.querySelectorAll('.slide')
   const sliderContainer = document.querySelector(".slider-container");
   const slideWidth = slides[0].clientWidth;
@@ -202,7 +202,7 @@ onMounted(() => {
     }
   }, 8000);
   // Detectando si el usuario usa pc o movil
-  /*if (isMobile) {
+  if (isMobile) {
     // El usuario usa dispositivo móvil, capturamos evento tactil
     //ESTABLECIENDO POSICION ACTUAL Y ATRAPANDO VALORES DEL TOUCH***
     const slideWidth = slides[0].clientWidth;
@@ -302,7 +302,7 @@ onMounted(() => {
       touchMovePoint.value = null;
       distance.value = null;
     });
-  } */
+  } 
 })
 // Evento clic para las barras de posicion actual
 const barraHandle = (e) => {
@@ -461,7 +461,7 @@ const barraHandle = (e) => {
   h3 {
     position: absolute;
     top: 4rem;
-    left: calc(50% / 2.5);
+    left: calc(35% / 2.5);
   }
 }
 img {
@@ -560,7 +560,9 @@ video {
     height: 15rem;
     left: 5rem;
   }
-
+  .img h3 {
+    left: calc(50% / 2.5);
+  }
 }
 
 @media screen and (min-width: 800px) {
