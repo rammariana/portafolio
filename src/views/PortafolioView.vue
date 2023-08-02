@@ -1,28 +1,18 @@
 <template>
-<div class="slider">
-    <div class="barra-contenedor">
-      <div class="barra" @click="barraHandle(0, $event)"></div>
-      <div class="barra" @click="barraHandle(1, $event)"></div>
-      <div class="barra" @click="barraHandle(2, $event)"></div>
-      <div class="barra" @click="barraHandle(3, $event)"></div>
-      <div class="barra" @click="barraHandle(4, $event)"></div>
-    </div>
-  <div class="slider-container">
-    <div class="slide" id="0">
-      <div class="img">
-        <div class="foto foto-g video">
-          <video src="../assets/barraza-1.webm" autoplay="true" muted="true" loop="true"></video>
-        </div>
-        <div class="foto foto-p">
-          <img src="../assets/barraza-2.png" alt="Barraza Investors">
-        </div> 
-        <h3>Barraza Investors</h3>  
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    <!-- Diapositiva 1-->
+    <div class="carousel-item active">
+      <div class="cuadrado">
+        <h3>Barraza Invertors</h3>
+        <video src="../assets/barraza-1.webm" autoplay="true" muted="true" loop="true" class="d-block video"></video>
+        <img src="../assets/barraza-2.png" alt="Barraza Investors" class="d-block foto-p">
         <div class="tecnologias">
           <v-icon name="la-html5" scale="1.8"></v-icon>
           <v-icon name="la-css3-alt" scale="1.8"></v-icon>
           <v-icon name="ri-vuejs-line" scale="1.8"></v-icon>
           <v-icon name="si-bootstrap" scale="1.8"></v-icon>
-        </div>     
+        </div>
         <div class="btn-container">
           <button class="button">
             <span class="button-text"><a href="https://barrazainvestors.netlify.app/home">Demo</a></span>
@@ -30,23 +20,19 @@
            <button class="button">
             <span class="button-text"><a href="https://github.com/rammariana/barraza-investors">Code</a></span>
           </button>
-        </div>        
+        </div>
       </div>
     </div>
-    <div class="slide" id="1">
-      <div class="img">
-        <div class="foto foto-g">
-          <img src="../assets/tienda-1.png" alt="IDtly">
-        </div>
-        <div class="foto foto-p">
-          <img src="../assets/tienda-2.png" alt="IDtly">
-        </div>
-        <h3>Tienda de Modas</h3>  
+    <!-- Diapositiva 2-->
+    <div class="carousel-item">
+      <div class="cuadrado">
+        <h3>Tienda de modas</h3>
+        <img src="../assets/tienda-1.png" alt="IDtly" class="d-block foto-g">
+        <img src="../assets/tienda-2.png" alt="IDtly" class="d-block foto-p">
         <div class="tecnologias">
           <v-icon name="la-html5" scale="1.8"></v-icon>
           <v-icon name="la-css3-alt" scale="1.8"></v-icon>
           <v-icon name="fa-sass" scale="1.8"></v-icon>
-          
         </div> 
         <div class="btn-container">
           <button class="button">
@@ -55,18 +41,15 @@
           <button class="button">
             <span class="button-text"><a href="https://github.com/rammariana/tienda-sass">Code</a></span>
           </button>
-        </div>        
+        </div>
       </div>
     </div>
-    <div class="slide" id="2">
-      <div class="img">
-        <div class="foto foto-g">
-          <img src="../assets/laika-1.png" alt="Laika copia">
-        </div>
-        <div class="foto foto-p">
-          <img src="../assets/laika-2.png" alt="Laika copia">
-        </div>
-        <h3>Copia de Laika</h3>  
+    <!-- Diapositiva 3-->
+    <div class="carousel-item">
+      <div class="cuadrado">
+        <h3>Balto (copia de Laika)</h3>
+        <img src="../assets/laika-1.png" alt="Balto" class="d-block foto-g">
+        <img src="../assets/laika-2.png" alt="Balto" class="d-block foto-p">
         <div class="tecnologias">
           <v-icon name="la-html5" scale="1.8"></v-icon>
           <v-icon name="la-css3-alt" scale="1.8"></v-icon>
@@ -79,19 +62,15 @@
            <button class="button">
             <span class="button-text"><a href="https://github.com/rammariana/laika">Code</a></span>
           </button>
-        </div>        
-      
+        </div>
       </div>
     </div>
-    <div class="slide" id="3">
-      <div class="img">
-        <div class="foto foto-g">
-          <img src="../assets/tictac-1.png" alt="Tic-Tac">
-        </div>
-        <div class="foto foto-p">
-          <img src="../assets/tictac-2.png" alt="Tic-Tac">
-        </div>
-        <h3>Juego tic-tac-toe</h3>  
+      <!-- Diapositiva 4-->
+    <div class="carousel-item">
+      <div class="cuadrado">
+        <h3>Tic-tac-toe</h3>
+        <img src="../assets/tictac-1.png" alt="Tic-Tac" class="d-block foto-g">
+        <img src="../assets/tictac-2.png" alt="Tic-Tac" class="d-block foto-p">
         <div class="tecnologias">
           <v-icon name="la-html5" scale="1.8"></v-icon>
           <v-icon name="la-css3-alt" scale="1.8"></v-icon>
@@ -104,24 +83,20 @@
            <button class="button">
             <span class="button-text"><a href="https://github.com/rammariana/tic-tac-toe">Code</a></span>
           </button>
-        </div>        
-      
+        </div>
       </div>
     </div>
-    <div class="slide" id="4">
-      <div class="img">
-        <div class="foto foto-g">
-          <img src="../assets/poke-1.png" alt="Pokememoria">
-        </div>
-        <div class="foto foto-p">
-          <img src="../assets/poke-2.png" alt="Pokememoria">
-        </div>
-        <h3>Juego Memoria</h3>  
+      <!-- Diapositiva 5-->
+    <div class="carousel-item">
+      <div class="cuadrado">
+        <h3>Pokememoria</h3>
+        <img src="../assets/poke-1.png" alt="Pokememoria" class="d-block foto-g">
+        <img src="../assets/poke-2.png" alt="Pokememoria" class="d-block foto-p">
         <div class="tecnologias">
           <v-icon name="la-html5" scale="1.8"></v-icon>
           <v-icon name="la-css3-alt" scale="1.8"></v-icon>
           <v-icon name="io-logo-javascript" scale="1.8"></v-icon>
-        </div> 
+        </div>
         <div class="btn-container">
           <button class="button">
             <span class="button-text"><a href="https://pokememoria.netlify.app">Demo</a></span>
@@ -129,13 +104,14 @@
            <button class="button">
             <span class="button-text"><a href="https://github.com/rammariana/memoria">Code</a></span>
           </button>
-        </div>        
+        </div>
       </div>
     </div>
+
   </div>
 </div>
 </template>
-<script setup>
+<!--<script setup>
 import { onMounted, ref } from 'vue'
 
 let id = ref(0)
@@ -354,6 +330,7 @@ const barraHandle = (e) => {
   }
 
 }
+
 </script>
 <style lang="scss" scoped>
 .aparecer-derecha {
@@ -608,5 +585,163 @@ video {
     left:40rem; /*33rem*/
   }
 
+}
+</style>
+-->
+<style lang="scss" scoped>
+.carousel {
+  animation: aparecer-derecha 1s ease;
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 79%;
+    button {
+      width: 6.5rem;
+      height: 3rem;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      border: none;
+      border-radius: 2rem;
+      background-color: $color-morado;
+      color: $color-blanco;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  a {
+    text-decoration: none;
+    color: $color-blanco;
+  }
+}
+.button-text {
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: $color-amarillo;
+  border-radius: 2rem;
+  transition: height 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.button:hover {
+  border: none;
+}
+// Modificando estilos del carrusel de bootstrap
+.carousel-item-left.active .cuadrado .foto-p, .carousel-item-next .cuadrado .foto-p {
+  animation: aparecer-derecha 2s ease;
+  transition: 2s;
+  animation-delay: .3s;
+}
+.carousel-item-right.active .cuadrado .foto-p,
+.carousel-item-prev .cuadrado .foto-p {
+  animation: aparecer-izquierda 2s ease;
+  transition: 2s;
+  animation-delay: .1s;
+}
+.carousel-item-left.active .cuadrado .foto-g, .carousel-item-next .cuadrado .foto-g, .carousel-item-left.active .cuadrado .video, .carousel-item-next .cuadrado .video {
+  animation: aparecer-derecha 1s ease;
+  transition: 2s;
+}
+.carousel-item-right.active .cuadrado .foto-g,
+.carousel-item-prev .cuadrado .foto-g, .carousel-item-right.active .cuadrado .video, .carousel-item-prev .cuadrado .video  {
+  animation: aparecer-izquierda 1s ease;
+  transition: 2s;
+}
+.carousel-item-left,
+.carousel-item-right {
+  transform: translateX(0);
+  transition: 2s;
+}
+.cuadrado {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  h3 {
+    top: 10%;
+    position: inherit;
+  }
+}
+.foto-g, .foto-p {
+  position: absolute;
+  box-shadow: 1px 1px 5px black;
+  transition: 5s;
+}
+.foto-g {
+  width: 12rem;
+  height: 12rem;
+  top: 8rem;
+  left: 10%;
+}
+.foto-p {
+  width: 10rem;
+  height: 10rem;
+  top: 15rem;
+  left: 45%;  
+}
+.tecnologias {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position:absolute;
+  top: 75%;
+  .ov-icon {
+    color: $color-texto;
+  }
+  .ov-icon:hover {
+    fill: $color-texto;
+  }
+}
+video {
+  position: absolute;
+  width: 16rem;
+  height: 10rem;
+  object-fit: cover;
+  top: 8rem;
+  left: 10%;  
+  box-shadow: 1px 1px 5px black;
+}
+
+ @keyframes aparecer-derecha {
+  from {
+    display: none;
+    transform: translateX(100%);
+  }
+  to {
+    display: block;
+    transform: translateX(0);
+  }
+}
+@keyframes aparecer-izquierda {
+  from {
+    display: none;
+    transform: translateX(-110%);
+  }
+  to {
+    display: block;
+    transform: translateX(0%);
+  }
 }
 </style>
