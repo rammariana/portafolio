@@ -334,9 +334,6 @@ const barraHandle = (e) => {
 </script>
 -->
 <style lang="scss" scoped>
-.carousel {
-  animation: aparecer-derecha 1s ease;
-}
 .btn-container {
   width: 100%;
   display: flex;
