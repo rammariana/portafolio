@@ -394,22 +394,26 @@ const barraHandle = (e) => {
 // Modificando estilos del carrusel de bootstrap
 .carousel-item-left.active .cuadrado .foto-p, .carousel-item-next .cuadrado .foto-p {
   animation: aparecer-derecha 2s ease;
+  -moz-animation: aparecer-derecha 2s ease;
   transition: 2s;
   animation-delay: .3s;
 }
 .carousel-item-right.active .cuadrado .foto-p,
 .carousel-item-prev .cuadrado .foto-p {
   animation: aparecer-izquierda 2s ease;
+  -moz-animation: aparecer-izquierda 2s ease;
   transition: 2s;
   animation-delay: .1s;
 }
 .carousel-item-left.active .cuadrado .foto-g, .carousel-item-next .cuadrado .foto-g, .carousel-item-left.active .cuadrado .video, .carousel-item-next .cuadrado .video {
   animation: aparecer-derecha 1s ease;
+  -moz-animation: aparecer-derecha 1s ease;
   transition: 2s;
 }
 .carousel-item-right.active .cuadrado .foto-g,
 .carousel-item-prev .cuadrado .foto-g, .carousel-item-right.active .cuadrado .video, .carousel-item-prev .cuadrado .video  {
   animation: aparecer-izquierda 1s ease;
+  -moz-animation: aparecer-izquierda 1s ease;
   transition: 2s;
 }
 .carousel-item-left,
