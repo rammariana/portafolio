@@ -8,7 +8,7 @@
               <p><v-icon name="co-gmail"></v-icon> marianasmatos1</p>
               <p><v-icon name="bi-github"></v-icon> rammariana</p>
           </div>
-          <p class="mb-5 parrafo">Hola, soy Mariana, me he enfocado principalmente en practicar y sentar las bases del desarrollo frontend con Vue.js, sin embargo también siento gran interés por la naturaleza, el crochet y el backend, por lo cual actualmente me encuentro estudiando Node.js y Express. Soy una persona perseverante, autodidacta, responsable con sus obligaciones, me gusta la tranquilidad, el respeto y el buen trato con mis compañeros.</p>
+          <p class="mb-5 parrafo">Hola, soy Mariana, me he enfocado principalmente en practicar y sentar las bases del desarrollo frontend con Vue.js, sin embargo también siento gran interés por la naturaleza, el crochet y el backend, por lo cual actualmente me encuentro estudiando Node.js y Express. Soy una persona perseverante, autodidacta, responsable con sus obligaciones. Me gusta la tranquilidad, el respeto y el buen trato con mis compañeros.</p>
           <div class="div mb-5">
             <div class="habilidades">
               <h5><v-icon name="gi-bullseye" scale="1.2"></v-icon> Habilidades</h5>
