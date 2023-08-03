@@ -23,7 +23,7 @@
         </router-link>
       </div>
       <div class="contenedor-seccion-dos">
-        <p>Soy autodidacta en el desarrollo web frontend y una persona curiosa, me gusta buscar nuevos retos para expandir conocimientos y mejorar mis capacidades tanto en el ámbito personal como en el profesional. Me gusta la naturaleza, tejer, programar, y hacer ejercicios en mi tiempo libre.<!--En estos momentos me encuentro desarrollando mis habilidades con <b>Vue.js</b> y estoy entrando al backend con <b>Node.js</b> ya que es un área que me llama mucho la atención.--></p>
+        <p>Soy autodidacta en el desarrollo web frontend y una persona curiosa. Me gusta buscar nuevos retos para expandir conocimientos y mejorar mis capacidades tanto en el ámbito personal como en el profesional. Me gusta la naturaleza, tejer, programar, y hacer ejercicios en mi tiempo libre.<!--En estos momentos me encuentro desarrollando mis habilidades con <b>Vue.js</b> y estoy entrando al backend con <b>Node.js</b> ya que es un área que me llama mucho la atención.--></p>
         <p>Bienvenido a mi espacio personal, aquí encontrarás los proyectos que he realizado a lo largo de mi formacion como autodidacta y algunos proyectos para clientes.</p>
       </div>
     </section>
