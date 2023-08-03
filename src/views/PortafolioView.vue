@@ -433,7 +433,7 @@ const barraHandle = (e) => {
 .foto-g, .foto-p {
   position: absolute;
   box-shadow: 1px 0px 9px 0.5px $color-negro;
-  transition: 5s;
+  //transition: 5s;
 }
 .foto-g {
   width: 12rem;
