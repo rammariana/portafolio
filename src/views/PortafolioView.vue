@@ -332,261 +332,6 @@ const barraHandle = (e) => {
 }
 
 </script>
-<style lang="scss" scoped>
-.aparecer-derecha {
-  animation: aparecer-derecha 1s ease-out;
-}
-.aparecer-izquierda {
-  animation: aparecer-izquierda 1s ease-out;
-}
-.barra {
-  width: 90%;
-  padding: 0.2rem;
-  border-radius: 2rem;
-  background-color: rgba(142, 146, 150, 0.418);
-  transition: background-color 1s ease-out;
-}
-.barra-contenedor {
-  width: 100%;
-  padding: 0 1rem;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  column-gap: 0.5rem;
-  bottom: 1rem;
-  z-index: 9;
-}
-.btn-container {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  top: 79%;
-    button {
-      width: 6.5rem;
-    height: 3rem;
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    border: none;
-    border-radius: 2rem;
-    background-color: $color-morado;
-    color: $color-blanco;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  a {
-    text-decoration: none;
-    color: $color-blanco;
-  }
-}
-.button-text {
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.button::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  background-color: $color-amarillo;
-  border-radius: 2rem;
-  transition: height 0.3s ease-out;
-  transition: width 0.3s ease-out;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.button:hover::before {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-.button:hover {
-  border: none;
-}
-.foto {
-  position: absolute;
-  transition: display 2s ease; 
-  box-shadow: -5px 5px 9px rgba(37, 36, 36, 0.822);
-}
-.foto-g {
-  width: 15rem;
-  height: 15rem;
-  top: 8rem;
-  left: 3.5rem;
-}
-.foto-p {
-  width: 10rem;
-  height: 10rem;
-  top: 16rem;
-  left: 10rem;
-}
-.img {
-  height: 100%;
-  position: relative;
-  transition: background-color 1s ease;
-  h3 {
-    position: absolute;
-    top: 4rem;
-    left: calc(35% / 2.5);
-  }
-}
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.slider {
-  /*padding-top: 4rem;*/
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  transform: translateX(100%);
-  animation: aparecer-derecha 1s forwards;
-  transition: background-color 1s ease-out;
-}
-.slider-container {
-  display: flex;
-  width: calc(100% * 2);
-  height: 100%;
-  transition: transform 0.4s ease-out;
-}
-.slide {
-  flex: 1 0 100%;
-  align-items: center;
-  justify-content: center;
-  /* los valores de flex equivalen a:
-  1 -> tendrán un factor de flexibilidad igual, se expandirán para ocupar todo el espacio disponible
-  0 -> los elementos flexibles no pueden encogerse más allá de su tamaño inicial
-  100% ->  cada elemento ocupará todo el ancho disponible dentro del contenedor*/
-}
-.tecnologias {
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  top: 77%;
-  .ov-icon {
-    color: $color-texto;
-  }
-  .ov-icon:hover {
-    fill: $color-texto;
-  }
-}
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.video {
-  width: 16rem;
-  height: 10rem;
-  left: 2.5rem;
-}
-
-@keyframes aparecer-derecha {
-  from {
-    display: none;
-    transform: translateX(100%);
-  }
-  to {
-    display: block;
-    transform: translateX(0);
-  }
-}
-@keyframes aparecer-izquierda {
-  from {
-    display: none;
-    transform: translateX(-110%);
-  }
-  to {
-    display: block;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes aparecer-abajo {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@media screen and (min-width: 600px) {
-  .foto-g {
-    left: 10rem;
-  }
-  .foto-p {
-    left: 24rem;
-  }
-  .video {
-    width: 25rem;
-    height: 15rem;
-    left: 5rem;
-  }
-  .img h3 {
-    left: calc(50% / 2.5);
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .foto-g {
-    width: 20rem;
-    height: 20rem;
-    //top: 15vh;
-    left: 8rem;
-  }
-  .foto-p {
-    width: 15rem;
-    height: 15rem;
-    top: 28vh;
-    left: 27rem;
-  }
-  .video {
-    width: 25rem;
-    height: 15rem;
-  }
-}
-@media screen and (min-height: 1300px) {
-  .slider {
-    padding-top: 8rem;
-  }
-  .video {
-    top: 12vh;
-  }
-  .foto-g {
-    left: 12rem;
-  }
-  .foto-p {
-    left:30rem;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .slider {
-    padding-top: 2rem;
-  }
-  .foto-g {
-    left: 20rem; /*15rem*/
-  }
-  .foto-p {
-    left:40rem; /*33rem*/
-  }
-
-}
-</style>
 -->
 <style lang="scss" scoped>
 .carousel {
@@ -686,7 +431,7 @@ video {
 }
 .foto-g, .foto-p {
   position: absolute;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 0px 9px 0.5px $color-negro;
   transition: 5s;
 }
 .foto-g {
@@ -721,27 +466,35 @@ video {
   object-fit: cover;
   top: 8rem;
   left: 10%;  
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 0px 9px 0.5px $color-negro;
 }
 
- @keyframes aparecer-derecha {
-  from {
-    display: none;
-    transform: translateX(100%);
+@media screen and (min-width: 600px) {
+  .foto-g {
+    left: 10rem;
+    width: 15rem;
+    height: 15rem;
   }
-  to {
-    display: block;
-    transform: translateX(0);
+  .foto-p {
+    left: 24rem;
+    width: 11rem;
+    height: 11rem;
+  }
+  .video {
+    width: 22rem;
+    height: 12rem;
+    left: 12%;
   }
 }
-@keyframes aparecer-izquierda {
-  from {
-    display: none;
-    transform: translateX(-110%);
+@media screen and (min-width: 800px) {
+  .foto-g {
+    left: 35%;
   }
-  to {
-    display: block;
-    transform: translateX(0%);
+  .foto-p {
+    left: 50%;
+  }
+  .video {
+    left: 35%;
   }
 }
 </style>

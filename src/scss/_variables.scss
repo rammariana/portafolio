@@ -14,6 +14,37 @@ $color-rojo-focus:rgba(226, 27, 27, 0.568);
 $color-negro: rgb(32, 37, 46); 
 $color-texto: rgb(142, 146, 150);
 $carousel-transition-duration:.2s;
+@keyframes aparecer {
+  0%{
+    opacity: 0;
+    //transform: translateY(50%);
+  }
+  100%{
+    opacity: 1;
+    //transform: translateY(0);
+  }
+}
+
+ @keyframes aparecer-derecha {
+  from {
+    display: none;
+    transform: translateX(100%);
+  }
+  to {
+    display: block;
+    transform: translateX(0);
+  }
+}
+@keyframes aparecer-izquierda {
+  from {
+    display: none;
+    transform: translateX(-110%);
+  }
+  to {
+    display: block;
+    transform: translateX(0%);
+  }
+}
 
 @keyframes rellenar-boton {
   0% {
@@ -23,15 +54,5 @@ $carousel-transition-duration:.2s;
   100% {
     width: 100%;
     background-color: $color-naranja;
-  }
-}
-@keyframes aparecer {
-  0%{
-    opacity: 0;
-    //transform: translateY(50%);
-  }
-  100%{
-    opacity: 1;
-    //transform: translateY(0);
   }
 }
